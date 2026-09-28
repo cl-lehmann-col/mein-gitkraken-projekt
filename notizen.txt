@@ -1,0 +1,3 @@
+# Meine Git-Notizen
+## Tag 1- GitKraken installiert- Erstes Repository erstellt- README angepasst
+## Wichtige Befehle- Commit: Versionsstand festhalten- Push: Zu GitHub hochladen- Pull: Von GitHub herunterladen
