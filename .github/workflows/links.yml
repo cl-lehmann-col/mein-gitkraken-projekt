@@ -16,7 +16,7 @@ jobs:
         with:
           fail: false
           failIfEmpty: false
-          args: --verbose --no-progress https://design-cologne.de/typo3_site/public
+          args: --verbose --no-progress
 
       - name: cUpload Lychee Report
         if: always()
