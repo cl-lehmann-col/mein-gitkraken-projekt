@@ -16,11 +16,9 @@ jobs:
         with:
           fail: false
           failIfEmpty: false
-          format: markdown
-          output: ./lychee/out.md
-          args: --verbose --no-progress https://design-cologne.de/typo3_site/public
+          args: --verbose --no-progress --output ./lychee/out.md https://design-cologne.de/typo3_site/public
 
-      - name: Upload Lychee Report
+      - name: cUpload Lychee Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
