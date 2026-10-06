@@ -15,8 +15,17 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: false
-          args: --verbose --no-progress https://design-cologne.de/typo3_site/public
           failIfEmpty: false
+          format: markdown
+          output: ./lychee/out.md
+          args: --verbose --no-progress https://design-cologne.de/typo3_site/public
+
+      - name: Upload Lychee Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-report
+          path: ./lychee/out.md
 
       - name: Create Issue From File
         if: steps.lychee.outputs.exit_code != 0
