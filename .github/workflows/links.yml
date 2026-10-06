@@ -22,7 +22,7 @@ jobs:
         uses: peter-evans/create-issue-from-file@v5
         with:
           failIfEmpty: false
-          args: --verbose --no-progress https://design-cologne.de/typo3_site/public
+          args: --verbose --no-progress -- https://design-cologne.de/typo3_site/public
           title: Link Checker Report
           content-filepath: ./lychee/out.md
           labels: report, automated issue
