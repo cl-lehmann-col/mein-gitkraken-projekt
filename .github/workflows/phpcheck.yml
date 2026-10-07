@@ -1,0 +1,12 @@
+name: PHP-Syntax-Check
+on: [push, pull_request]
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Projekt herunterladen
+        uses: actions/checkout@v4
+      - name: PHP-Version anzeigen
+        run: php -v
+      - name: Syntax aller PHP-Dateien pruefen
+        run: find . -name "*.php" -print0 | xargs -0 -n 1 php -l
