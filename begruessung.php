@@ -1,3 +1,3 @@
 <?php
 $name = "Git";
-echo "Hallo " . $name . "!"
+echo "Hallo " . $name . "!";
